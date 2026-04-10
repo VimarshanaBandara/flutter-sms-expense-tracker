@@ -1,4 +1,4 @@
-package com.example.flutter_assignment_app
+package com.example.sms_expense_tracker
 
 import io.flutter.embedding.android.FlutterActivity
 

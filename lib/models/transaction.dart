@@ -16,7 +16,6 @@ enum TransactionCategory {
 
 /// Adds display helpers to [TransactionCategory].
 extension TransactionCategoryExtension on TransactionCategory {
-  /// Returns a human-readable label (e.g. "Groceries").
   String get displayName {
     switch (this) {
       case TransactionCategory.transport:
@@ -36,7 +35,7 @@ extension TransactionCategoryExtension on TransactionCategory {
     }
   }
 
-  /// Returns a representative emoji for use in the UI (e.g. "🛒").
+  /// Returns a representative emoji for use in the UI
   String get emoji {
     switch (this) {
       case TransactionCategory.transport:
@@ -68,35 +67,30 @@ extension TransactionTypeExtension on TransactionType {
 // Transaction model
 // ---------------------------------------------------------------------------
 
-/// Represents a single parsed bank-SMS transaction.
-///
-/// Instances are created by [SmsParser.parse] and stored in
-/// [TransactionNotifier]. All fields are immutable; use [copyWith] to
-/// produce an updated copy (e.g. when the user changes [category]).
 class Transaction {
-  /// Unique identifier generated at parse time (UUID v4).
+  // Unique identifier generated at parse time (UUID v4).
   final String id;
 
-  /// Transaction amount in LKR (e.g. 1692.00).
+  // Transaction amount in LKR (e.g. 1692.00).
   final double amount;
 
-  /// Whether this transaction is an expense or income.
+  // Whether this transaction is an expense or income.
   final TransactionType type;
 
-  /// Name of the merchant or transfer source extracted from the SMS.
+  // Name of the merchant or transfer source extracted from the SMS.
   final String merchant;
 
-  /// Date and time the transaction occurred, parsed from the SMS body.
+  // Date and time the transaction occurred, parsed from the SMS body.
   final DateTime dateTime;
 
-  /// Category assigned automatically by keyword matching; can be updated
-  /// by the user from the detail screen.
+  // Category assigned automatically by keyword matching; can be updated
+  // by the user from the detail screen.
   final TransactionCategory category;
 
-  /// Masked account number from the SMS (e.g. "**1114").
+  // Masked account number from the SMS (e.g. "**1114").
   final String accountReference;
 
-  /// The original, unmodified SMS string retained for reference.
+  // The original, unmodified SMS string retained for reference.
   final String rawMessage;
 
   const Transaction({
@@ -110,9 +104,6 @@ class Transaction {
     required this.rawMessage,
   });
 
-  /// Returns a copy of this transaction with the specified fields replaced.
-  ///
-  /// Any field that is not supplied keeps its current value.
   Transaction copyWith({
     String? id,
     double? amount,

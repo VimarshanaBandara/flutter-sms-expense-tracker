@@ -34,7 +34,6 @@ class TransactionNotifier extends Notifier<List<Transaction>> {
   List<Transaction> build() {
     final parsedTransactions = SmsParser.parseAll(_sampleSmsMessages);
 
-    // Sort descending by dateTime so the newest transaction is first.
     parsedTransactions.sort((a, b) => b.dateTime.compareTo(a.dateTime));
 
     return parsedTransactions;
