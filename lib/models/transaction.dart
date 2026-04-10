@@ -1,11 +1,4 @@
-/// Indicates the direction of money movement for a transaction.
-enum TransactionType {
-  /// Money was spent (debited from account).
-  expense,
-
-  /// Money was received (credited to account).
-  income,
-}
+enum TransactionType { expense, income }
 
 enum TransactionCategory {
   transport,
