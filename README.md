@@ -4,16 +4,16 @@
 
 ### Home Screen
 
-![Home](screenshots/home_screen.png)
+![Home](screenshots/home_screen.jpg.jpg)
 
 ### Transaction List
 
-![List](screenshots/transaction_list.png)
+![List](screenshots/transaction_list.jpg)
 
 ### Details Screen
 
-![Details](screenshots/details_screen.png)
+![Details](screenshots/details_screen.jpg)
 
 ### Category Update
 
-![Update](screenshots/category_update.png)
+![Update](screenshots/category_update.jpeg)
