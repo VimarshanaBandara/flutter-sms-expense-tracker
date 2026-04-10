@@ -4,16 +4,16 @@
 
 ### Home Screen
 
-![Home](screenshots/home_screen.jpg.jpg)
+![Home](lib/screenshots/home_screen.png.jpg)
 
 ### Transaction List
 
-![List](screenshots/transaction_list.jpg)
+![List](lib/screenshots/transaction_list.jpg)
 
 ### Details Screen
 
-![Details](screenshots/details_screen.jpg)
+![Details](lib/screenshots/details_screen.jpg)
 
 ### Category Update
 
-![Update](screenshots/category_update.jpeg)
+![Update](lib/screenshots/category_update.jpeg)
